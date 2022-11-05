@@ -1,0 +1,2 @@
+com\magento\Runners\JunitRunner.class
+com\magento\steps\LoginSteps.class

@@ -1,0 +1,106 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 2,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 10116254400,
+              "status": "passed"
+            },
+            "line": 3,
+            "name": "User navigates to the application",
+            "match": {
+              "location": "com.magento.steps.LoginSteps.user_navigates_to_the_application()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-11-05T07:39:44.989Z",
+        "before": [
+          {
+            "result": {
+              "duration": 4986700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.magento.steps.Hooks.beforeScenario()"
+            }
+          }
+        ],
+        "line": 5,
+        "name": "Verify the login functionality for valid Cerdentails",
+        "description": "",
+        "id": "login-functionality;verify-the-login-functionality-for-valid-cerdentails",
+        "after": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.magento.steps.Hooks.afterScenario()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 302197900,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User enters the valid username and valid password",
+            "match": {
+              "location": "com.magento.steps.LoginSteps.user_enters_the_valid_username_and_valid_password()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1829096700,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User clicks on the login button",
+            "match": {
+              "location": "com.magento.steps.LoginSteps.user_clicks_on_the_login_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "User Succesfully login into the application",
+            "match": {
+              "location": "com.magento.steps.LoginSteps.user_succesfully_login_into_the_application()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@testCase01"
+          }
+        ]
+      }
+    ],
+    "name": "Login Functionality",
+    "description": "",
+    "id": "login-functionality",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Features/Login.feature",
+    "tags": []
+  }
+]
