@@ -8,6 +8,9 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
+import com.magento.utils.ConfigReader;
+import com.magento.utils.Constants;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass {
@@ -15,6 +18,7 @@ public class BaseClass {
 	public static WebDriver driver;
 	
 	public static void intailizeBrowser(String browserName) {
+		ConfigReader.readProperties(Constants.CONFIGS_FILEPATH);
 		switch (browserName) {
 
 		case "chrome":
@@ -39,7 +43,7 @@ public class BaseClass {
 		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 
-		driver.get("http://live.techpanda.org/index.php/customer/account/login/");
+		driver.get(ConfigReader.getProperty("URL"));
 		PageInitializer.intailizepage();
 	}
 
