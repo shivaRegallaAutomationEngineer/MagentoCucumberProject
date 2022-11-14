@@ -5,35 +5,37 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 
+import com.magento.baseClass.PageInitializer;
+import com.magento.pages.LoginPageElements;
+import com.magento.utils.CommonMethods;
+
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class LoginSteps {
+public class LoginSteps extends PageInitializer{
 	static WebDriver driver;
 
 	@Given("User navigates to the application")
 	public void user_navigates_to_the_application() {
-		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.get("http://live.techpanda.org/index.php/customer/account/login/");
+    
 
 	}
 
 	@When("User enters the valid username and valid password")
 	public void user_enters_the_valid_username_and_valid_password() {
-
-		driver.findElement(By.id("email")).sendKeys("shiva3@gmail.com");
-		driver.findElement(By.id("pass")).sendKeys("testing");
-
+		//LoginPageElements lpe= new LoginPageElements();
+		//lpe.setUsername("shiva1@gmail.com");
+		login.setUsername("shiva1@gmail.com");
 	}
 
 	@When("User clicks on the login button")
 	public void user_clicks_on_the_login_button() {
-		driver.findElement(By.id("send2")).click();
-
+//		driver.findElement(By.id("send2")).click();
+	//	LoginPageElements lpe= new LoginPageElements();
+		//lpe.setLoginClick();
+		login.setLoginClick();
 	}
 
 	@Then("User Succesfully login into the application")
